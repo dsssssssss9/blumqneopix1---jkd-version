@@ -6,7 +6,7 @@
         "bluetooth": "*",
         "microphone": "*",
         "maqueen": "github:bsiever/pxt-maqueen#v2.0.2",
-        "robotbit": "github:kittenbot/pxt-robotbit#v0.3.8"
+        "SuperBit": "github:YahboomTechnology/SuperBitLib#941907e488223730b1ee621e382560de6bd0e1cd"
     },
     "files": [
         "main.blocks",
