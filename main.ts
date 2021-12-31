@@ -10,6 +10,57 @@ function doMode () {
         if (uartdata == "c") {
             pins.digitalWritePin(DigitalPin.P1, 0)
             pins.digitalWritePin(DigitalPin.P2, 0)
+        } else {
+            if (uartdata == "G") {
+                strip.clear()
+                strip.show()
+                strip.showColor(neopixel.colors(NeoPixelColors.Red))
+                strip.show()
+            } else {
+                if (uartdata == "H") {
+                    strip.clear()
+                    strip.show()
+                    strip.showColor(neopixel.colors(NeoPixelColors.Green))
+                    strip.show()
+                } else {
+                    if (uartdata == "I") {
+                        strip.clear()
+                        strip.show()
+                        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+                        strip.show()
+                    } else {
+                        if (uartdata == "J") {
+                            strip.clear()
+                            strip.show()
+                            strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+                            strip.show()
+                        } else {
+                            if (uartdata == "K") {
+                                strip.clear()
+                                strip.show()
+                                strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
+                                strip.show()
+                            } else {
+                                if (uartdata == "L") {
+                                    strip.clear()
+                                    strip.show()
+                                    strip.showColor(neopixel.colors(NeoPixelColors.Purple))
+                                    strip.show()
+                                } else {
+                                    if (uartdata == "M") {
+                                        strip.clear()
+                                        strip.show()
+                                        strip.showColor(neopixel.colors(NeoPixelColors.Black))
+                                        strip.show()
+                                    } else {
+                                    	
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -29,16 +80,7 @@ bluetooth.onBluetoothDisconnected(function () {
     connected = false
 })
 input.onButtonPressed(Button.A, function () {
-    strip.clear()
-    strip.show()
-    strip.showRainbow(1, 360)
-    for (let index = 0; index < 80; index++) {
-        strip.rotate(1)
-        strip.show()
-        basic.pause(32)
-    }
-    strip.clear()
-    strip.show()
+	
 })
 function doMotors () {
     if (uartdata == "A") {
