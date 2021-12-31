@@ -5,7 +5,8 @@
         "core": "*",
         "bluetooth": "*",
         "microphone": "*",
-        "maqueen": "github:bsiever/pxt-maqueen#v2.0.2"
+        "maqueen": "github:bsiever/pxt-maqueen#v2.0.2",
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.3.8"
     },
     "files": [
         "main.blocks",

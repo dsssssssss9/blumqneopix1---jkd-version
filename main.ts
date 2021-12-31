@@ -28,6 +28,18 @@ bluetooth.onBluetoothConnected(function () {
 bluetooth.onBluetoothDisconnected(function () {
     connected = false
 })
+input.onButtonPressed(Button.A, function () {
+    strip.clear()
+    strip.show()
+    strip.showRainbow(1, 360)
+    for (let index = 0; index < 80; index++) {
+        strip.rotate(1)
+        strip.show()
+        basic.pause(32)
+    }
+    strip.clear()
+    strip.show()
+})
 function doMotors () {
     if (uartdata == "A") {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, speed)
@@ -51,6 +63,7 @@ function doMotors () {
     }
 }
 let uartdata = ""
+let strip: neopixel.Strip = null
 let speed = 0
 let connected = false
 led.enable(false)
@@ -58,3 +71,7 @@ bluetooth.setTransmitPower(7)
 bluetooth.startUartService()
 connected = false
 speed = 100
+strip = neopixel.create(DigitalPin.P1, 20, NeoPixelMode.RGB)
+strip.setBrightness(32)
+strip.clear()
+strip.show()
